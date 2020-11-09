@@ -1,9 +1,4 @@
 body {
-  background-color: black;
-}
-
-h1 {
-  font-family: sans-serif;
-  font-size: 50vh;
-  color: white;
+  display: grid;
+  grid-template: repeat(4, 25vh) / repeat(6, calc(100vw / 6));
 }
