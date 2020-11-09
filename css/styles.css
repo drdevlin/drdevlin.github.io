@@ -2,7 +2,21 @@ body {
   display: grid;
   grid-template: repeat(4, 25vh) / repeat(6, calc(100vw / 6));
 }
+@media only screen and (min-aspect-ratio: 100/115) and (max-aspect-ratio: 135/100) { /* Medium aspect ratio */
+  body {
+    display: grid;
+    grid-template: repeat(4, 25vh) / repeat(4, calc(100vw / 4));
+  }
+}
+@media only screen and (max-aspect-ratio: 100/115) { /* Narrow aspect ratio */
+  body {
+    display: grid;
+    grid-template: repeat(5, 20vh) / repeat(3, calc(100vw / 3));
+  }
+}
 
+
+/* Header rules */
 header {
   grid-area: 2 / 4 / span 1 / span 3;
 
@@ -25,18 +39,13 @@ h1.medium {
 }
 
 @media only screen and (min-aspect-ratio: 100/115) and (max-aspect-ratio: 135/100) { /* Medium aspect ratio */
-  body {
-    display: grid;
-    grid-template: repeat(4, 25vh) / repeat(4, calc(100vw / 4));
-  }
-
   header {
     grid-area: 2 / 3 / span 1 / span 2;
     justify-content: flex-start;
   }
 
   h1 {
-    font-size: 8vw;
+    font-size: 7.5vw;
     margin-left: 4vw;
   }
 
@@ -50,11 +59,6 @@ h1.medium {
 }
 
 @media only screen and (max-aspect-ratio: 100/115) { /* Narrow aspect ratio */
-  body {
-    display: grid;
-    grid-template: repeat(5, 20vh) / repeat(3, calc(100vw / 3));
-  }
-
   header {
     grid-area: 2 / 2 / span 1 / span 2;
     justify-content: flex-start;
@@ -73,5 +77,44 @@ h1.medium {
   h1.medium {
     display: initial;
   }
+}
 
+
+/* Nav rules */
+nav button {
+  min-width: 100%;
+  min-height: 100%;
+  padding-top: 1rem;
+  padding-bottom: 1rem;
+}
+
+nav.contact {
+  grid-area: 1 / 1 / span 1 / span 1;
+}
+
+nav.skills {
+  grid-area: 4 / 5 / span 1 / span 1;
+}
+
+h2 {
+  font-family: sans-serif;
+  font-size: 2rem;
+  line-height: 1.1;
+  color: hsl(215, 70%, 95%)
+}
+
+@media only screen and (min-aspect-ratio: 100/115) and (max-aspect-ratio: 135/100) { /* Medium aspect ratio */
+  nav.skills {
+    grid-area: 4 / 3 / span 1 / span 1;
+  }
+}
+
+@media only screen and (max-aspect-ratio: 100/115) { /* Narrow aspect ratio */
+  nav.skills {
+    grid-area: 5 / 2 / span 1 / span 1;
+  }
+
+  h2 {
+    font-size: 1rem;
+  }
 }
