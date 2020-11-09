@@ -2,3 +2,19 @@ body {
   display: grid;
   grid-template: repeat(4, 25vh) / repeat(6, calc(100vw / 6));
 }
+
+header {
+  grid-area: 2 / 4 / span 1 / span 3;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  background-color: hsl(215, 70%, 20%);
+}
+
+h1 {
+  font-family: sans-serif;
+  font-size: 5vw;
+  color: hsl(215, 70%, 90%)
+}

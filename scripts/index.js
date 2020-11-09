@@ -25,7 +25,7 @@ const colorBlocks = [];
 colorBlocksNL.forEach(node => colorBlocks.push(node)); //Push all colorblocks into an array
 const colorBlocksShuffled = shuffle(colorBlocks); //Shuffle the colorblocks array
 colorBlocksShuffled.forEach((block, i) => {
-  block.style.backgroundColor = 'hsl(215, 70%, ' + (i + 20) * 2 + '%)'; //Color, but increment the lightness each time
+  block.style.backgroundColor = 'hsl(215, 70%, ' + (i + 18) * 2 + '%)'; //Color, but increment the lightness each time
 });
 
 
