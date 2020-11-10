@@ -121,7 +121,6 @@ nav.weather {
   grid-area: 3 / 3 / span 1 / span 1;
 }
 
-
 h2 {
   font-family: sans-serif;
   font-size: 2rem;
@@ -150,3 +149,34 @@ h2 {
     font-size: 1rem;
   }
 }
+
+/* Contact rules */
+div.contact button {
+  min-width: 100%;
+  min-height: 100%;
+}
+
+div.contact img {
+  width: 2rem;
+}
+
+div.contact.email {
+  grid-area: 1 / 2 / span 1 / span 1;
+  z-index: 2;
+  visibility: hidden;
+}
+
+.colorblock.email {
+  grid-area: 1 / 2 / span 1 / span 1;
+}
+
+div.contact.github {
+  grid-area: 1 / 3 / span 1 / span 1;
+  z-index: 2;
+  visibility: hidden;
+}
+
+.colorblock.github {
+  grid-area: 1 / 3 / span 1 / span 1;
+}
+
