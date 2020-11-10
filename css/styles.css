@@ -2,6 +2,9 @@ body {
   display: grid;
   grid-template: repeat(4, 25vh) / repeat(6, calc(100vw / 6));
 }
+.colorblock, .photo {
+  overflow: hidden;
+}
 @media only screen and (min-aspect-ratio: 100/115) and (max-aspect-ratio: 135/100) { /* Medium aspect ratio */
   body {
     display: grid;
@@ -81,11 +84,21 @@ h1.medium {
 
 
 /* Nav rules */
-nav button {
+nav.colorblock button {
   min-width: 100%;
   min-height: 100%;
   padding-top: 1rem;
   padding-bottom: 1rem;
+}
+
+nav.photo {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+nav.photo img {
+  width: 400px;
 }
 
 nav.contact {
@@ -94,6 +107,10 @@ nav.contact {
 
 nav.skills {
   grid-area: 4 / 5 / span 1 / span 1;
+}
+
+nav.weather {
+  grid-area: 3 / 3 / span 1 / span 1;
 }
 
 h2 {
