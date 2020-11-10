@@ -124,11 +124,17 @@ h2 {
   nav.skills {
     grid-area: 4 / 3 / span 1 / span 1;
   }
+  nav.weather {
+    grid-area: 3 / 2 / span 1 / span 1;
+  }
 }
 
 @media only screen and (max-aspect-ratio: 100/115) { /* Narrow aspect ratio */
   nav.skills {
     grid-area: 5 / 2 / span 1 / span 1;
+  }
+  nav.weather {
+    grid-area: 3 / 1 / span 1 / span 1;
   }
 
   h2 {
