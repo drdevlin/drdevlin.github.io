@@ -31,13 +31,14 @@ colorBlocksShuffled.forEach((block, i) => {
 const email = document.querySelector('div.contact.email');
 const github = document.querySelector('div.contact.github'); //Bind elements of logos
 
-function toggleVisibility(element) { //Function for toggling any element
-  element.style.visibility = (element.style.visibility === 'hidden' || !element.style.visibility) ? 'visible' : 'hidden'; //Swap visibility between visible and hidden
+function toggleVisibility(...elements) { //Function for toggling any number of any elements
+  for (element of elements) {
+    element.style.visibility = (element.style.visibility === 'hidden' || !element.style.visibility) ? 'visible' : 'hidden'; //Swap visibility between visible and hidden
+  }
 }
 
 function toggleContact() { //Specifically toggles the contact logos
-  toggleVisibility(email);
-  toggleVisibility(github);
+  toggleVisibility(email, github);
 }
 
 const contactButton = document.querySelector('nav.contact button'); //Bind the contact button
@@ -51,11 +52,7 @@ const git = document.querySelector('div.skills.git');
 const nodejs = document.querySelector('div.skills.node'); //Bind elements of logos
 
 function toggleSkills() { //Specifically toggles the skills logos
-  toggleVisibility(html5);
-  toggleVisibility(css3);
-  toggleVisibility(js);
-  toggleVisibility(git);
-  toggleVisibility(nodejs);
+  toggleVisibility(html5, css3, js, git, nodejs);
 }
 
 const skillsButton = document.querySelector('nav.skills button'); //Bind the skills button
