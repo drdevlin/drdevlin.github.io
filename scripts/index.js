@@ -29,7 +29,8 @@ colorBlocksShuffled.forEach((block, i) => {
 
 /* Functionality for contact button */
 const email = document.querySelector('div.contact.email');
-const github = document.querySelector('div.contact.github'); //Bind elements of logos
+const github = document.querySelector('div.contact.github');
+const linkedin = document.querySelector('div.contact.linkedin'); //Bind elements of logos
 
 function toggleVisibility(...elements) { //Function for toggling any number of any elements
   for (element of elements) {
@@ -37,7 +38,7 @@ function toggleVisibility(...elements) { //Function for toggling any number of a
   }
 }
 
-function toggleContact() { toggleVisibility(email, github); } //Specifically toggles the contact logos
+function toggleContact() { toggleVisibility(email, github, linkedin); } //Specifically toggles the contact logos
 
 const contactButton = document.querySelector('nav.contact button'); //Bind the contact button
 contactButton.addEventListener('click', toggleContact); //Toggle the contact logos when clicked
