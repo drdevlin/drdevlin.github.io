@@ -7,13 +7,11 @@ body {
 }
 @media only screen and (min-aspect-ratio: 100/115) and (max-aspect-ratio: 135/100) { /* Medium aspect ratio */
   body {
-    display: grid;
     grid-template: repeat(4, 25vh) / repeat(4, calc(100vw / 4));
   }
 }
 @media only screen and (max-aspect-ratio: 100/115) { /* Narrow aspect ratio */
   body {
-    display: grid;
     grid-template: repeat(5, 20vh) / repeat(3, calc(100vw / 3));
   }
 }
