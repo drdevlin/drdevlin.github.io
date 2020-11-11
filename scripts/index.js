@@ -18,7 +18,6 @@ function shuffle(array) {
   return array;
 }
 
-
 /* Randomly color the colorblocks */
 const colorBlocksNL = document.querySelectorAll('.colorblock'); //Bind all colorblocks to a NodeList
 const colorBlocks = [];
@@ -27,6 +26,24 @@ const colorBlocksShuffled = shuffle(colorBlocks); //Shuffle the colorblocks arra
 colorBlocksShuffled.forEach((block, i) => {
   block.style.backgroundColor = 'hsl(215, 70%, ' + (i + 25) * 1.7 + '%)'; //Color, but increment the lightness each time
 });
+
+/* Functionality for contact button */
+const email = document.querySelector('div.contact.email');
+const github = document.querySelector('div.contact.github'); //Bind elements of logos
+
+function toggleVisibility(element) { //Function for toggling any element
+  element.style.visibility = (element.style.visibility === 'hidden') ? 'visible' : 'hidden'; //Swap visibility between visible and hidden
+}
+
+function toggleContact() { //Specifically toggles the contact logos
+  toggleVisibility(email);
+  toggleVisibility(github);
+}
+
+const contactButton = document.querySelector('nav.contact button'); //Bind the contact button
+contactButton.addEventListener('click', toggleContact); //Toggle the contact logos when clicked
+
+
 
 /* Disabling this for now
 /* Show clickable elements when attempting to scroll
