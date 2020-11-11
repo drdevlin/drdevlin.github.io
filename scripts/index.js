@@ -34,7 +34,13 @@ const linkedin = document.querySelector('div.contact.linkedin'); //Bind elements
 
 function toggleVisibility(...elements) { //Function for toggling any number of any elements
   for (element of elements) {
-    element.style.visibility = (element.style.visibility === 'hidden' || !element.style.visibility) ? 'visible' : 'hidden'; //Swap visibility between visible and hidden
+    if (element.style.visibility === 'hidden' || !element.style.visibility) { //Swap visibility between visible and hidden
+      element.style.visibility = 'visible';
+      element.style.opacity = 1;
+    } else {
+      element.style.visibility = 'hidden';
+      element.style.opacity = 0;
+    }
   }
 }
 
