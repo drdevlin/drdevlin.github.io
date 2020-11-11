@@ -1,1 +1,59 @@
-<svg aria-hidden="true" focusable="false" data-prefix="fab" data-icon="npm" class="svg-inline--fa fa-npm fa-w-18" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 576 512"><path fill="currentColor" d="M288 288h-32v-64h32v64zm288-128v192H288v32H160v-32H0V160h576zm-416 32H32v128h64v-96h32v96h32V192zm160 0H192v160h64v-32h64V192zm224 0H352v128h64v-96h32v96h32v-96h32v96h32V192z"></path></svg>
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg
+   xmlns:dc="http://purl.org/dc/elements/1.1/"
+   xmlns:cc="http://creativecommons.org/ns#"
+   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+   xmlns:svg="http://www.w3.org/2000/svg"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   inkscape:version="1.0 (4035a4f, 2020-05-01)"
+   sodipodi:docname="npm.svg"
+   id="svg915"
+   version="1.1"
+   viewBox="0 0 576 512"
+   role="img"
+   class="svg-inline--fa fa-npm fa-w-18"
+   data-icon="npm"
+   data-prefix="fab"
+   focusable="false"
+   aria-hidden="true">
+  <metadata
+     id="metadata921">
+    <rdf:RDF>
+      <cc:Work
+         rdf:about="">
+        <dc:format>image/svg+xml</dc:format>
+        <dc:type
+           rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
+      </cc:Work>
+    </rdf:RDF>
+  </metadata>
+  <defs
+     id="defs919" />
+  <sodipodi:namedview
+     inkscape:current-layer="svg915"
+     inkscape:window-maximized="0"
+     inkscape:window-y="23"
+     inkscape:window-x="0"
+     inkscape:cy="256"
+     inkscape:cx="288"
+     inkscape:zoom="1.1503906"
+     showgrid="false"
+     id="namedview917"
+     inkscape:window-height="702"
+     inkscape:window-width="1112"
+     inkscape:pageshadow="2"
+     inkscape:pageopacity="0"
+     guidetolerance="10"
+     gridtolerance="10"
+     objecttolerance="10"
+     borderopacity="1"
+     bordercolor="#666666"
+     pagecolor="#ffffff" />
+  <path
+     style="stroke-width:1;fill:#08172b;fill-opacity:1"
+     id="path913"
+     d="m 288,288 h -32 v -64 h 32 z M 576,160 V 352 H 288 v 32 H 160 V 352 H 0 V 160 Z M 160,192 H 32 V 320 H 96.000002 V 224 H 128 v 96 h 32 z m 160,0 H 192 v 160 h 64 v -32 h 64 z m 224,0 H 352 v 128 h 64 v -96 h 32 v 96 h 32 v -96 h 32 v 96 h 32 z"
+     fill="currentColor" />
+</svg>
