@@ -159,10 +159,6 @@ div.contact a {
   justify-content: center;
 }
 
-div.contact a:hover {
-  opacity: 0.9;
-}
-
 div.contact img {
   width: 2rem;
 }
