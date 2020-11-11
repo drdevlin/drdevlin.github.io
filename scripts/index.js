@@ -32,7 +32,7 @@ const email = document.querySelector('div.contact.email');
 const github = document.querySelector('div.contact.github'); //Bind elements of logos
 
 function toggleVisibility(element) { //Function for toggling any element
-  element.style.visibility = (element.style.visibility === 'hidden') ? 'visible' : 'hidden'; //Swap visibility between visible and hidden
+  element.style.visibility = (element.style.visibility === 'hidden' || !element.style.visibility) ? 'visible' : 'hidden'; //Swap visibility between visible and hidden
 }
 
 function toggleContact() { //Specifically toggles the contact logos
