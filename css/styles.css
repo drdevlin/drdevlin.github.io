@@ -145,14 +145,22 @@ h2 {
     grid-area: 3 / 1 / span 1 / span 1;
   }
   h2 {
-    font-size: 1.5rem;
+    font-size: 1.3rem;
   }
 }
 
 /* Contact rules */
-div.contact button {
+div.contact a {
   min-width: 100%;
   min-height: 100%;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+div.contact a:hover {
+  opacity: 0.9;
 }
 
 div.contact img {
