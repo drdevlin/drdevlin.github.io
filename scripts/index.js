@@ -37,9 +37,7 @@ function toggleVisibility(...elements) { //Function for toggling any number of a
   }
 }
 
-function toggleContact() { //Specifically toggles the contact logos
-  toggleVisibility(email, github);
-}
+function toggleContact() { toggleVisibility(email, github); } //Specifically toggles the contact logos
 
 const contactButton = document.querySelector('nav.contact button'); //Bind the contact button
 contactButton.addEventListener('click', toggleContact); //Toggle the contact logos when clicked
@@ -51,9 +49,7 @@ const js = document.querySelector('div.skills.js');
 const git = document.querySelector('div.skills.git');
 const nodejs = document.querySelector('div.skills.node'); //Bind elements of logos
 
-function toggleSkills() { //Specifically toggles the skills logos
-  toggleVisibility(html5, css3, js, git, nodejs);
-}
+function toggleSkills() { toggleVisibility(html5, css3, js, git, nodejs); } //Specifically toggles the skills logos
 
 const skillsButton = document.querySelector('nav.skills button'); //Bind the skills button
 skillsButton.addEventListener('click', toggleSkills); //Toggle the skills logos when clicked
