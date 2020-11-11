@@ -43,6 +43,25 @@ function toggleContact() { //Specifically toggles the contact logos
 const contactButton = document.querySelector('nav.contact button'); //Bind the contact button
 contactButton.addEventListener('click', toggleContact); //Toggle the contact logos when clicked
 
+/* Functionality for skills button */
+const html5 = document.querySelector('div.skills.html');
+const css3 = document.querySelector('div.skills.css');
+const js = document.querySelector('div.skills.js');
+const git = document.querySelector('div.skills.git');
+const nodejs = document.querySelector('div.skills.node'); //Bind elements of logos
+
+function toggleSkills() { //Specifically toggles the skills logos
+  toggleVisibility(html5);
+  toggleVisibility(css3);
+  toggleVisibility(js);
+  toggleVisibility(git);
+  toggleVisibility(nodejs);
+}
+
+const skillsButton = document.querySelector('nav.skills button'); //Bind the skills button
+skillsButton.addEventListener('click', toggleSkills); //Toggle the skills logos when clicked
+
+
 
 
 /* Disabling this for now
