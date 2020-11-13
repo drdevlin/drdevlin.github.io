@@ -70,10 +70,11 @@ Complete
 * Responsive
 * Random color assignment for different look everytime
 * Semantic HTML (as much as possible)
+* Screen reader friendly
 
 To-do list:
-* Screen reader friendly
-* Accessibility
+* Even better accessibility
+* Distinquish links from non-links
 
 ## Status
 Project is: _in progress_.
