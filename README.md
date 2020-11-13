@@ -24,11 +24,13 @@ The primary purpose of this website is to display projects. It's secondary purpo
 * Javascript ES6
 
 ## Code Examples
-Semantic HTML:
+Accessible HTML:
 ```html
-<nav class="weather photo">
-  <a href="https://whispering-earth-37317.herokuapp.com" target="_blank"><img src="images/weather.jpg" alt="raindrops on a window" /></a>
-</nav>
+  <button class="contact colorblock">CONTACT</button>
+  <div class="contact github">
+    <a href="https://github.com/drdevlin" aria-label="contact on github"><img src="images/github.svg" alt="a github icon" /></a>
+  </div>
+  <div class="colorblock github" role="presentation"></div>
 ```
 
 Responsive Grid:
@@ -69,7 +71,7 @@ Complete
 * CSS Grid
 * Responsive
 * Random color assignment for different look everytime
-* Semantic HTML (as much as possible)
+* Semantic HTML and ARIA (as much as possible)
 * Screen reader friendly
 
 To-do list:
