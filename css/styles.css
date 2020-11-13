@@ -86,45 +86,24 @@ h1.medium {
 }
 
 
-/* Nav rules */
-nav.colorblock button {
-  min-width: 100%;
-  min-height: 100%;
+/* Button rules */
+button {
   padding-top: 1rem;
   padding-bottom: 1rem;
 }
 
-nav.photo {
-  display: flex;
-  align-items: center;
-  justify-content: center;
+button:hover {
+  opacity: 0.9;
 }
 
-nav.photo img {
-  width: 400px;
-  transition: width 0.3s ease;
-}
-
-nav.photo img:hover {
-  width: 380px;
-}
-
-nav.contact {
+button.contact {
   grid-area: 1 / 1 / span 1 / span 1;
   transition: opacity 0.5s ease;
 }
 
-nav.skills {
+button.skills {
   grid-area: 4 / 5 / span 1 / span 1;
   transition: opacity 0.5s ease;
-}
-
-nav.contact:hover, nav.skills:hover {
-  opacity: 0.9;
-}
-
-nav.weather {
-  grid-area: 3 / 3 / span 1 / span 1;
 }
 
 h2 {
@@ -133,20 +112,41 @@ h2 {
   color: hsl(215, 70%, 10%);
 }
 
+
+/* Project rules */
+div.photo {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+div.photo img {
+  width: 400px;
+  transition: width 0.3s ease;
+}
+
+div.photo img:hover {
+  width: 380px;
+}
+
+div.weather {
+  grid-area: 3 / 3 / span 1 / span 1;
+}
+
 @media only screen and (min-aspect-ratio: 100/115) and (max-aspect-ratio: 135/100) { /* Medium aspect ratio */
-  nav.skills {
+  button.skills {
     grid-area: 4 / 3 / span 1 / span 1;
   }
-  nav.weather {
+  div.weather {
     grid-area: 3 / 2 / span 1 / span 1;
   }
 }
 
 @media only screen and (max-aspect-ratio: 100/115) { /* Narrow aspect ratio */
-  nav.skills {
+  button.skills {
     grid-area: 5 / 2 / span 1 / span 1;
   }
-  nav.weather {
+  div.weather {
     grid-area: 3 / 1 / span 1 / span 1;
   }
   h2 {
@@ -213,8 +213,6 @@ div.contact.linkedin {
     grid-area: 2 / 1 / span 1 / span 1;
   }
 }
-
-
 
 
 /* Skills rules */

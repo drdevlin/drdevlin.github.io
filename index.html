@@ -10,37 +10,39 @@
 </head>
 <body>
   <!-- Header -->
-  <header>
+  <header role="presentation">
     <h1 class="wide">DEVLIN RUSSELL</h1>
     <h1 class="medium">DEVLIN<br>RUSSELL</h1> 
   </header>
 
-  <!-- Navigation buttons -->
-  <nav class="contact colorblock">
-    <button><h2>CONTACT</h2></button>
-  </nav>
-  <nav class="skills colorblock">
-    <button><h2>SKILLS</h2></button> 
-  </nav>
-  <nav class="weather photo">
-    <a href="https://whispering-earth-37317.herokuapp.com" target="_blank"><img src="images/weather.jpg" alt="raindrops on a window" /></a> 
-  </nav>
-
   <!-- Contact -->
+  <button class="contact colorblock">
+    <h2>CONTACT</h2>
+  </button>
   <div class="contact email">
-    <a href="mailto:devlinrussell@fastmail.com"><img src="images/mail.svg" alt="an email icon" /></a>
+    <a href="mailto:devlinrussell@fastmail.com" aria-label="contact by email"><img src="images/mail.svg" alt="an email icon" id="emailImage" /></a>
   </div>
   <div class="colorblock email" role="presentation"></div>
   <div class="contact github">
-    <a href="https://github.com/drdevlin" target="_blank"><img src="images/github.svg" alt="a github icon" /></a>
+    <a href="https://github.com/drdevlin" target="_blank" aria-label="contact on github"><img src="images/github.svg" alt="a github icon" /></a>
   </div>
   <div class="colorblock github" role="presentation"></div>
   <div class="contact linkedin">
-    <a href="https://www.linkedin.com/in/devlin-russell-03a3514/" target="_blank"><img src="images/linkedin.svg" alt="a linked in icon" /></a>
+    <a href="https://www.linkedin.com/in/devlin-russell-03a3514/" target="_blank" aria-label="contact on linked in"><img src="images/linkedin.svg" alt="a linked in icon" /></a>
   </div>
   <div class="colorblock linkedin" role="presentation"></div>
 
+
+  <!-- Projects -->
+  <div class="weather photo">
+    <a href="https://whispering-earth-37317.herokuapp.com" target="_blank" aria-label="weather app"><img src="images/weather.jpg" alt="raindrops on a window" /></a> 
+  </div>
+
+
   <!-- Skills -->
+  <button class="skills colorblock">
+    <h2>SKILLS</h2>
+  </button> 
   <div class="skills html">
     <img src="images/html5.svg" alt="an html 5 icon" />
   </div>
