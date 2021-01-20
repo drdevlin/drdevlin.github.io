@@ -216,8 +216,9 @@ div.contact.linkedin {
 /* Skills rules */
 div.skills {
   display: flex;
+  flex-flow: wrap;
   align-items: center;
-  justify-content: center;
+  justify-content: space-around;
 
   z-index: 2;
   visibility: hidden;
@@ -227,6 +228,9 @@ div.skills {
 
 div.skills img {
   width: 2rem;
+}
+#express-logo {
+  width: 6rem;
 }
 
 div.skills.html {
