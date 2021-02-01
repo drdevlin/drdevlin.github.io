@@ -1,24 +1,23 @@
 # Portfolio Website
-> A simple website to display some of my projects
+A simple website to display some of my projects
 
-## Table of contents
-* [General info](#general-info)
-* [Screenshots](#screenshots)
-* [Technologies](#technologies)
+![Screenshot](./images/screenshot.png)
+
+[Deployed Here](devlinrussell.net)
+
+## Table of Contents
+* [About](#about)
+* [Built With](#built-with)
+* [Code Examples](#code-examples)
 * [Features](#features)
 * [Status](#status)
 * [Inspiration](#inspiration)
 * [Contact](#contact)
 
-## General info
+## About
 The primary purpose of this website is to display projects. It's secondary purpose is to be a portfolio project itself. Thus, it is built using HTML5, CSS3, and some simple client-side javascript. It is also version controlled with git.
 
-[Deployed Here](devlinrussell.net)
-
-## Screenshots
-![Example screenshot](./images/screenshot.png)
-
-## Technologies
+## Built With
 * HTML5
 * CSS3
 * Javascript ES6
@@ -85,4 +84,4 @@ Project is: _in progress_.
 Inspired by [Codecademy](codecademy.com) portfolio project.
 
 ## Contact
-Created by [@drdevlin](mailto:devlinrussell@fastmail.com) Devlin Russell  - feel free to contact me!
+Created by [@drdevlin](mailto:drdevlin@fastmail.com) Devlin Russell.
