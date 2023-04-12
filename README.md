@@ -54,13 +54,14 @@ body {
 
 Fun Styling with JS:
 ```js
-/* Randomly color the colorblocks */
-const colorBlocksNL = document.querySelectorAll('.colorblock'); //Bind all colorblocks to a NodeList
-const colorBlocks = [];
-colorBlocksNL.forEach(node => colorBlocks.push(node)); //Push all colorblocks into an array
-const colorBlocksShuffled = shuffle(colorBlocks); //Shuffle the colorblocks array
-colorBlocksShuffled.forEach((block, i) => {
-  block.style.backgroundColor = 'hsl(215, 70%, ' + (i + 25) * 1.7 + '%)'; //Color, but increment the lightness each time
+// Then, shuffle the blocks.
+const colourBlocks = Array.from(document.querySelectorAll('.colorblock'));
+const shuffledColourBlocks = shuffle(colourBlocks);
+
+// And colour them.
+shuffledColourBlocks.forEach((block, i) => {
+  // Increment the lightness for each block.
+  block.style.backgroundColor = `hsl(215, 70%, ${(i + 25) * 1.7}%)`; 
 });
 ```
 

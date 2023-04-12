@@ -1,86 +1,67 @@
-/* Function for shuffling colorblocks */
-function shuffle(array) {
-  let currentIndex = array.length, temporaryValue, randomIndex;
+// Randomly colour the colour blocks.
 
-  // While there remain elements to shuffle...
+// First, make a function to shuffle the blocks.
+const shuffle = (array) => {
+  let currentIndex = array.length;
+
+  // While there remain elements to shuffle,
   while (0 !== currentIndex) {
 
-    // Pick a remaining element...
-    randomIndex = Math.floor(Math.random() * currentIndex);
+    // pick a remaining element,
+    const randomIndex = Math.floor(Math.random() * currentIndex);
     currentIndex -= 1;
 
-    // And swap it with the current element.
-    temporaryValue = array[currentIndex];
+    // and swap it with the current element.
+    const temp = array[currentIndex];
     array[currentIndex] = array[randomIndex];
-    array[randomIndex] = temporaryValue;
+    array[randomIndex] = temp;
   }
 
   return array;
 }
 
-/* Randomly color the colorblocks */
-const colorBlocksNL = document.querySelectorAll('.colorblock'); //Bind all colorblocks to a NodeList
-const colorBlocks = [];
-colorBlocksNL.forEach(node => colorBlocks.push(node)); //Push all colorblocks into an array
-const colorBlocksShuffled = shuffle(colorBlocks); //Shuffle the colorblocks array
-colorBlocksShuffled.forEach((block, i) => {
-  block.style.backgroundColor = 'hsl(215, 70%, ' + (i + 25) * 1.7 + '%)'; //Color, but increment the lightness each time
+// Then, shuffle the blocks.
+const colourBlocks = Array.from(document.querySelectorAll('.colorblock'));
+const shuffledColourBlocks = shuffle(colourBlocks);
+
+// And colour them.
+shuffledColourBlocks.forEach((block, i) => {
+  // Increment the lightness for each block.
+  block.style.backgroundColor = `hsl(215, 70%, ${(i + 25) * 1.7}%)`; 
 });
 
-/* Functionality for contact button */
-const email = document.querySelector('div.contact.email');
-const github = document.querySelector('div.contact.github');
-const linkedin = document.querySelector('div.contact.linkedin'); //Bind elements of logos
 
-function toggleVisibility(...elements) { //Function for toggling any number of any elements
-  for (element of elements) {
-    if (element.style.visibility === 'hidden' || !element.style.visibility) { //Swap visibility between visible and hidden
+// Create toggle buttons.
+
+// First, make a function to toggle visibility.
+const toggle = (...elements) => {
+  elements.forEach((element) => {
+    if (element.style.visibility === 'hidden' || !element.style.visibility) {
       element.style.visibility = 'visible';
       element.style.opacity = 1;
     } else {
       element.style.visibility = 'hidden';
       element.style.opacity = 0;
     }
-  }
+  });
 }
 
-function toggleContact() { toggleVisibility(email, github, linkedin); } //Specifically toggles the contact logos
+// Get contact elements.
+const email = document.querySelector('div.contact.email');
+const github = document.querySelector('div.contact.github');
+const linkedin = document.querySelector('div.contact.linkedin');
 
-const contactButton = document.querySelector('button.contact'); //Bind the contact button
-contactButton.addEventListener('click', toggleContact); //Toggle the contact logos when clicked
+// Add toggle to contact button.
+const contactButton = document.querySelector('button.contact');
+contactButton.addEventListener('click', () => toggle(email, github, linkedin));
 
-/* Functionality for skills button */
+// Get skills elements.
 const html5 = document.querySelector('div.skills.html');
 const css3 = document.querySelector('div.skills.css');
 const js = document.querySelector('div.skills.js');
 const git = document.querySelector('div.skills.git');
-const nodejs = document.querySelector('div.skills.node'); //Bind elements of logos
+const nodejs = document.querySelector('div.skills.node');
 
-function toggleSkills() { toggleVisibility(html5, css3, js, git, nodejs); } //Specifically toggles the skills logos
-
-const skillsButton = document.querySelector('button.skills'); //Bind the skills button
-skillsButton.addEventListener('click', toggleSkills); //Toggle the skills logos when clicked
-
-
-
-
-/* Disabling this for now
-/* Show clickable elements when attempting to scroll
-const contact = document.querySelector('nav.contact');
-const skills = document.querySelector('nav.skills');
-const weather = document.querySelector('nav.weather img');
-
-function flashButtons() {
-  contact.style.opacity = '0.9';
-  skills.style.opacity = '0.9';
-  weather.style.width = '380px';
-  setTimeout(() => {
-    contact.style.opacity = 'initial';
-    skills.style.opacity = 'initial';
-    weather.style.width = '400px';
-    document.removeEventListener('scroll', flashButtons);
-  }, 250);
-}
-
-document.addEventListener('scroll', flashButtons);
-*/
+// Add toggle to skills button.
+const skillsButton = document.querySelector('button.skills');
+skillsButton.addEventListener('click', () => toggle(html5, css3, js, git, nodejs));
