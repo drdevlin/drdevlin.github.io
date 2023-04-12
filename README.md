@@ -11,16 +11,15 @@ A simple website to display some of my projects
 * [Code Examples](#code-examples)
 * [Features](#features)
 * [Status](#status)
-* [Inspiration](#inspiration)
 * [Contact](#contact)
 
 ## About
-The primary purpose of this website is to display projects. It's secondary purpose is to be a portfolio project itself. Thus, it is built using HTML5, CSS3, and some simple client-side javascript. It is also version controlled with git.
+The primary purpose of this website is to display projects. It's secondary purpose is to be a portfolio project itself. Thus, it is built using HTML5, CSS3, and some simple client-side JavaScript.
 
 ## Built With
 * HTML5
 * CSS3
-* Javascript ES6
+* Vanilla JavaScript
 
 ## Code Examples
 Accessible HTML:
@@ -29,7 +28,7 @@ Accessible HTML:
   <div class="contact github">
     <a href="https://github.com/drdevlin" aria-label="contact on github"><img src="images/github.svg" alt="a github icon" /></a>
   </div>
-  <div class="colorblock github" role="presentation"></div>
+  <div class="colorblock github"></div>
 ```
 
 Responsive Grid:
@@ -69,19 +68,16 @@ colorBlocksShuffled.forEach((block, i) => {
 Complete
 * CSS Grid
 * Responsive
-* Random color assignment for different look everytime
+* Random colour assignment for different look every time
 * Semantic HTML and ARIA (as much as possible)
 * Screen reader friendly
 
 To-do list:
 * Even better accessibility
-* Distinquish links from non-links
+* Distinguish links from non-links
 
 ## Status
 Project is: _in progress_.
-
-## Inspiration
-Inspired by [Codecademy](codecademy.com) portfolio project.
 
 ## Contact
 Created by [@drdevlin](mailto:drdevlin@fastmail.com) Devlin Russell.
