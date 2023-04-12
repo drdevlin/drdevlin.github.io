@@ -3,7 +3,7 @@ A simple website to display some of my projects
 
 ![Screenshot](./images/screenshot.png)
 
-[Deployed Here](devlinrussell.net)
+[Deployed Here](http://devlinrussell.net)
 
 ## Table of Contents
 * [About](#about)
