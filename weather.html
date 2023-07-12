@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Weather</title>
+  <link rel="stylesheet" href="styles/pages.css">
+</head>
+<body>
+  <header>
+    <h1>Weather</h1>
+    <h2>An XML Parser for Environment Canada's RSS</h2>
+  </header>
+  <a href="https://www.npmjs.com/package/ec-weather-js">▶︎ On NPM! ◀︎</a>
+  <section>
+    <h3>Impulse</h3>
+    <p>
+      While building a weather app using Environment Canada's RSS feed, I needed a way to extract weather data from the XML.
+      A JSON API was not available, and I found the XML API unwieldy.
+      So, I developed a human-centric, JavaScript-friendly API: a simple JavaScript object with intuitive, straight-forward properties
+      for accessing the weather data.
+    </p>
+  </section>
+  <section>
+    <h3>Notable Features</h3>
+    <p>▸ Get current conditions</p>
+    <p>▸ Get forecast for a specific date</p>
+    <p>▸ Get weekly forecast</p>
+    <p>▸ Get hourly forecast</p>
+    <p>▸ Narrow weekly and hourly forecasts to just temperatures or precipitation or winds</p>
+    <p>▸ JSDoc documentation</p>
+    <p>▸ Jest tested</p>
+  </section>
+  <section>
+    <h3>Highlight</h3>
+    <p>
+      One intuitive feature I wanted was the ability to narrow weekly and hourly forecasts to just temperatures or precipitation or winds.
+      And I wanted to do this by chaining.
+    </p>
+    <p>
+      <code>weather.weekly</code> yields an array of detailed objects for every day of the week,
+      but <code>weather.weekly.temperatures</code> should yield an array of simplified objects with just the day of the week and the temperature for that day.
+      Similarly, for <code>weather.weekly.precipitation</code> and <code>weather.weekly.winds</code>.
+    </p>
+    <p>
+      To accomplish this, I extended the Array class with getters that could yield the appropriately narrowed arrays.
+      This way, <code>weather.weekly</code> yields a detailed array that can be handled like a regular array.
+      But this array also possesses getters that can yield further arrays.
+    </p>
+  </section>
+</body>
+</html>

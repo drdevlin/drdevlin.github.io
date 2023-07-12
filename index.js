@@ -6,18 +6,18 @@ const get = (className) => {
   return Array.from(document.getElementsByClassName(className));
 };
 
-const hide = (className) => () => {
+const shrink = (className) => () => {
   const elements = get(className);
   elements.forEach((element) => {
-    element.style.display = 'none';
+    element.style.transform = 'scale(0)';
   });
 };
 
-const show = (className) => () => {
+const reset = (className) => () => {
   const elements = get(className);
   elements.forEach((element) => {
-    element.style.display = 'block';
+    element.style.transform = 'translateX(0)';
   });
 };
 
-document.body.addEventListener('click', () => call(hide('title'), show('preview')), { once: true });
+document.body.addEventListener('click', () => call(shrink('title-card'), reset('project')), { once: true });

@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Oscar Party</title>
+  <link rel="stylesheet" href="styles/pages.css">
+</head>
+<body>
+  <header>
+    <h1>Oscar Party</h1>
+    <h2>An Interactive Oscar Ballot for Mobile Web</h2>
+  </header>
+  <a href="https://oscar-party.vercel.app/">▶︎ Take it for a spin! ◀︎</a>
+  <section>
+    <h3>Impulse</h3>
+    <p>
+      Every year, my family hosts an Oscar party. We print out ballots of all the nominees, and each of us makes our selections.
+      During the broadcast, we follow along and see who guessed right. But there was always a couple points of friction in this.
+      First, nobody remembers everybody's guesses. And second, it's hard to keep track of everyone's current score.
+      This made for a lot of yelling, "who got that?!" and "who's in the lead now?!". So, I made an app that would answer all
+      these questions and more.
+    </p>
+  </section>
+  <section>
+    <h3>Notable Features</h3>
+    <p>▸ Sign-up for new players</p>
+    <p>▸ Easy sign-in using numeric PIN</p>
+    <p>▸ View other players' selections</p>
+    <p>▸ Highlights correct selections</p>
+    <p>▸ Make selections, when signed in</p>
+    <p>▸ Highlights winning nominees (once known)</p>
+    <p>▸ Calculates and highlights winning player</p>
+    <p>▸ Sorts players by score</p>
+  </section>
+  <section>
+    <h3>Highlight</h3>
+    <p>
+      I wanted signing in to be simple. But since this app would be sitting on the public web, I also needed it to be secure.
+      My solution was to combine two levels of security. First, the entire app is locked with a public/private key.
+      A user needs a magic link, which stores the public key in a cookie, to gain write access.
+      Second, user accounts are locked with a 4-digit PIN. This is enough security to keep out other family members but is
+      simple enough to make signing in a breeze.
+    </p>
+  </section>
+</body>
+</html>

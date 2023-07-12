@@ -1,0 +1,18 @@
+@import url('https://fonts.googleapis.com/css2?family=Pathway+Extreme&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Source+Code+Pro&display=swap');
+
+html {
+    font-family: 'Pathway Extreme', sans-serif;
+    color: white;
+    background-color: black;
+}
+
+h1, h2, h3, h4, h5, p, a {
+  margin-bottom: 0.25rem;
+  line-height: 1.2;
+}
+
+code {
+  font-family: 'Source Code Pro', monospace;
+  color: #02F4A7;
+}

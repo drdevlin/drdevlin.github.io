@@ -1,0 +1,47 @@
+@import './reset.css';
+@import './global.css';
+
+p {
+  line-height: 1.75rem;
+}
+
+body {
+  padding: 10vh 10vw;
+
+  @media (min-width: 800px) {
+    padding: 20vh 20vw;
+  }
+}
+
+header {
+  margin-bottom: 2rem;
+}
+
+section {
+  margin: 2rem 0;
+}
+
+h1 {
+  font-size: 3rem;
+  color: #F4006F;
+}
+
+h2 {
+  font-size: 1.5rem;
+  font-weight: 700;
+}
+
+h3 {
+  margin-bottom: 0.5rem;
+  border-bottom: 2px solid #F4006F;
+  font-weight: 700;
+}
+
+a {
+  color: #F47AB2;
+}
+
+.code-block {
+  max-height: 10rem;
+  overflow: scroll;
+}
