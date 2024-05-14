@@ -7,8 +7,8 @@ body {
   grid-template-rows: 1fr;
   grid-template-columns: 1fr;
   /* fill viewport */
-  height: 100vh;
-  width: 100vw;
+  height: 100svh;
+  width: 100svw;
 }
 
 h2 {
@@ -67,7 +67,7 @@ h3 {
 }
 
 .title {
-  width: 80vw;
+  width: 80svw;
 }
 
 .project {
@@ -76,25 +76,12 @@ h3 {
   grid-template-rows: 1fr;
   grid-template-columns: 1fr;
 
-  @media (orientation: landscape) {
-    height: 30vw;
-    width: 30vw;
-  }
-
-  @media (orientation: portrait) {
-    height: 30vh;
-    width: 30vh;
-  }
+  height: 30svmax;
+  width: 30svmax;
 }
 
 .project.one {
-  @media (orientation: landscape) {
-    transform: translateX(-50vw);
-  }
-
-  @media (orientation: portrait) {
-    transform: translateY(-50vh);
-  }
+  transform: translateX(-50svmax);
 
   transition-property: transform;
   transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
@@ -102,13 +89,7 @@ h3 {
 }
 
 .project.two {
-  @media (orientation: landscape) {
-    transform: translateX(50vw);
-  }
-
-  @media (orientation: portrait) {
-    transform: translateY(50vh);
-  }
+  transform: translateX(50svmax);
 
   transition-property: transform;
   transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
