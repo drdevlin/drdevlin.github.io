@@ -304,8 +304,9 @@ footer {
   right: 0;
   bottom: 0;
   left: 0;
-  display: grid;
-  grid-template-columns: repeat(5, minmax(0, 1fr));
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
   padding: 1rem;
 }
 
@@ -330,6 +331,10 @@ footer::before {
 }
 
 /* Buttons */
+
+sl-button {
+  min-width: 0;
+}
 
 .PH-button::part(base) {
   color: var(--sl-color-orange-500);
