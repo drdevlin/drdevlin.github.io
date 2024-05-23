@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Bayes's Theorem Interactive Visualizer</title>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@shoelace-style/shoelace@2.15.0/cdn/themes/light.css" />
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@shoelace-style/shoelace@2.15.0/cdn/themes/dark.css" />
+  <script type="module" src="https://cdn.jsdelivr.net/npm/@shoelace-style/shoelace@2.15.0/cdn/shoelace-autoloader.js"></script>
+
+  <link rel="stylesheet" href="index.css">
+  <script src="init.js"></script>
+</head>
+<body>
+
+  <header>
+    <h1>Bayes's Theorem</h1>
+    <div class="switch-platform">
+      <a id="info-link" class="info-link" href="https://www.youtube.com/watch?v=HZGCoVF3YvM">
+        <sl-icon name="info-circle" id="info-icon" class="info-icon"></sl-icon>
+      </a>
+      <sl-switch size="small" id="theme-switch" class="theme-switch">
+        <div class="theme-icons">
+          <sl-icon name="moon-fill" class="moon-icon"></sl-icon>
+          <sl-icon name="sun-fill" class="sun-icon"></sl-icon>
+        </div>
+      </sl-switch>
+    </div>
+  </header>
+
+  <main>
+    <div id="visualization" class="visualization">
+      <p id="all-title" class="all-title">The Space of All Possibilities</p>
+      <sl-split-panel id="all" class="all">
+        <sl-split-panel id="PH" class="PH" slot="start" vertical>
+          <div slot="start" id="PH-start" class="PH-start"></div>
+          <div slot="end" id="PH-end" class="PH-end"></div>
+        </sl-split-panel>
+        <sl-split-panel id="PnH" class="PnH" slot="end" vertical>
+          <div slot="start" id="PnH-start" class="PnH-start"></div>
+          <div slot="end" id="PnH-end" class="PnH-end"></div>
+        </sl-split-panel>
+      </sl-split-panel>
+      <div id="PH-overlay" class="overlay PH-overlay">
+        <p id="PH-value" class="PH-value"></p>
+      </div>
+      <div id="PnH-overlay" class="overlay PnH-overlay">
+        <p id="PnH-value" class="PnH-value"></p>
+      </div>
+      <div id="PEgH-overlay" class="overlay PEgH-overlay">
+        <p id="PEgH-value" class="PEgH-value"></p>
+        <p id="PHgE-value" class="PHgE-value"></p>
+      </div>
+      <div id="PEgnH-overlay" class="overlay PEgnH-overlay">
+        <p id="PEgnH-value" class="PEgnH-value"></p>
+      </div>
+    </div>
+  </main>
+
+  <footer>
+    <p id="overlay-description" class="overlay-description"></p>
+    <sl-button variant="text" size="large" id="PH-button" class="PH-button">P(H)</sl-button>
+    <sl-button variant="text" size="large" id="PEgH-button" class="PEgH-button">P(E|H)</sl-button>
+    <sl-button variant="text" size="large" id="PnH-button" class="PnH-button">P(~H)</sl-button>
+    <sl-button variant="text" size="large" id="PEgnH-button" class="PEgnH-button">P(E|~H)</sl-button>
+    <sl-button variant="text" size="large" id="PHgE-button" class="PHgE-button">P(H|E)</sl-button>
+  </footer>
+
+  <script src="index.js"></script>
+</body>
+</html>
