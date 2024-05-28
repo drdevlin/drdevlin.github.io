@@ -20,4 +20,11 @@ const reset = (className) => () => {
   });
 };
 
-document.body.addEventListener('click', () => call(shrink('title-card'), reset('project')), { once: true });
+const show = (className) => () => {
+  const elements = get(className);
+  elements.forEach((element) => {
+    element.style.opacity = 1;
+  });
+};
+
+document.body.addEventListener('click', () => call(shrink('title-card'), reset('project'), show('bayes')), { once: true });
